@@ -1,18 +1,19 @@
 
+/* EXEMPLO FIBONACCI COMUM */
+const fib = (n) => {
+    if(n <= 1) {
+        return 1;
+    }
+    return fib(n - 1) + fib(n - 2);
+}
 
-// const fib = (n) => {
-//     if(n <= 1) {
-//         return 1;
-//     }
-//     return fib(n - 1) + fib(n - 2);
-// }
-
-// console.log(`fib: ${fib(40)}`);
-// console.log(`fib: ${fib(40)}`);
-// console.log(`fib: ${fib(40)}`);
-// console.log(`fib: ${fib(40)}`);
+console.log(`fib: ${fib(40)}`);
+console.log(`fib: ${fib(40)}`);
+console.log(`fib: ${fib(40)}`);
+console.log(`fib: ${fib(40)}`);
 
 
+/* EXEMPLO FIBONACCI MEMOIZADO */
 const fib2 = (n, memo = {}) => {
     if(memo[n]) {
         return memo[n];
